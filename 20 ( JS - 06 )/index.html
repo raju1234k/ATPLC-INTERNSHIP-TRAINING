@@ -1,0 +1,75 @@
+<!Doctype html> 
+<html> 
+<head> 
+<title> JS-Task-17</title> 
+<head> 
+<body> 
+<h3> Exception Handling </h3> 
+<script> 
+try{
+console.log(a);
+}
+catch (error)
+{
+console.log("Error :" , error.message);
+}
+finally{
+console.log("Finally , program is finished");
+}
+
+
+
+function divide( dividend, divisor)
+{
+if (divisor === 0) {
+throw new Error ("Divide by zero error");
+}
+return dividend/divisor;
+}
+try{
+const result= divide(10,0);
+console.log(result);
+}
+catch(error) {
+console.error("Error:", error.message);
+}
+
+
+function accessArrayIndex(array,index)
+{
+if (index<0 || index>=array.length){
+throw new Error ("Out of bounds error");
+}
+return array[index];
+}
+const myArray=[1,2,3];
+try{
+const result= accessArrayIndex(myArray,3);
+console.log(result);
+}
+catch(error) 
+{ 
+console.log("Error:" , error.message);
+}
+
+
+
+function divide(dividend,divisor){
+try{
+if(divisor===0){
+throw new error ("Divide by Zero error");
+}
+return dividend/divisor;
+}
+catch(error){
+console.log("Error:", error.message);
+}
+finally{
+console.log("Division attempt completed");
+}
+}
+
+
+</script>
+</body>
+</html> 
